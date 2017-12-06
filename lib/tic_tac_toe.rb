@@ -89,7 +89,7 @@ def over?(board)
   end
 end
 
-def winner (board)
+def winner(board)
   if won?(board)
     win_index = won?(board)
     return board[win_index[0]]
@@ -101,5 +101,11 @@ end
 def play(board)
   until over?(board)
   turn(board)
+end
+  if winner(board)
+    puts "Congratulations #{winner(board)}"
+  else 
+    puts "Cat's Game!"
+  
 end
 end
